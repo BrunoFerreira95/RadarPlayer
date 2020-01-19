@@ -28,10 +28,19 @@ module.exports = {
                 }, 
             } = Apiresponse.data;
 
+            const Apiresponse2 = await axios.get(`https://api.opendota.com/api/players/${account_id}/wl`)
+
+            const {
+                win,
+                lose,
+            } = Apiresponse2.data;
+
             player = await Player.create({
                 account_id,
                 solo_competitive_rank,
                 rank_tier,
+                win,
+                lose,
                 profile: {
                     personaname,
                     avatar,

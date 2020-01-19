@@ -9,6 +9,8 @@ const PlayerSchema = new mongoose.Schema({
         profileurl: String,
         last_login: String,
     },
+    win: 0,
+    lose: 0,
 });
 
 module.exports = mongoose.model('Player', PlayerSchema);
