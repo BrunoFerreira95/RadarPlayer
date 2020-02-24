@@ -8,7 +8,7 @@ const routes = require('./routes');
 const app = express();
 const server = http.Server(app);
 
-mongoose.connect('mongodb+srv://PlayerRadar:3@radar@cluster0-0kydg.mongodb.net/dota?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://PlayerRadar:123@radar@cluster0-0kydg.mongodb.net/dota?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
